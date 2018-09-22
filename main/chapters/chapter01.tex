@@ -1,16 +1,23 @@
-\chapter{A Brief Review}
-\section{Newton's Laws}
-We can express Newton's laws with a couple of equations. \\
-The first main equation
-\[ \vec{F}_{net} = m \vec{a} = \dfrac{d \vec{p}}{dt} \]
-where $ \vec{a} $ is acceleration, $ m $ is mass, and $ \vec{p} $ is momentum, given by $ \vec{p} = m \vec{v} $. 
-\subsection*{Hooke's Laws}
-\[ F = -kx \]
-We can solve this differential equation to get 
-\[ -kx = m \dfrac{d^2 x}{dt^2} \]
-Total momentum is conserved, described by 
-\[ \vec{P}_{tot} = \mbox{ a constant vector} \]
-\section{Work and Energy}
-Total energy is conserved \\ 
-Work, a scalar, is shown by
-\[ W = \int_{\vec{r}_i}^{\vec{r}_f} \vec{F} \cdot d \vec{r} \]
+\chapter{The Basics of Relativity}
+This chapter deals with unaccelerated motion, special relativity. General relativity will be revisited later.
+\section{Background}
+\begin{example}
+	Imagine a coordinate system $ S' $ fixed to a train moving with speed $ v $ on a track while a second coordinate system $ S $ is fixed to the track. We assume that the track is at rest relative to the "ether". Suppose that at time $ t = 0 $ lightning strikes at points $ x = -L  \mbox{ and } +L$ on the track. At this instant the train has its center, $ x' = 0$, at the origin of the S-system , $ x = 0 $. Then an observer on the ground at $ x = 0 $ will see the lightning flashes arrive from either side at a time $ t = L/c $; that is they will arrive simultaneously. Will this be true for an observer stationed at the center of the train? If not, what is the time interval between the arrival of the flashes? \\
+	If the train was not moving, then, yes, the lightning would appear to have struck simultaneously. Since, the train is moving with speed $ v $, lets say in the positive direction. Then, the lightning at $ +L $ would have appeared to have happened before. \\
+	Going back to the question, the calculation for $ t = L/c $ comes from simply using velocity and distance. If we consider the lightning at $ -L $ the total distance it has to travel is $ L + vt$. Where $ vt $ comes from the train moving away from $ -L $. Since, $ \Delta x = \bar{v}t $, we can express \[ L +vt = ct \] solving for $ t $ \[ t = L/(c-v) \]. We can similarly find the time for the right lightning. Since, the distance for the right one is $ L - vt $  \[ t = L / (c+v) \] \\ 
+	The time difference is then 
+		\begin{align*}
+			\Delta t &= L/(c-v) - L/(c+v) \\
+			&= \dfrac{2L}{c(1-v^2/c^2)}
+		\end{align*}
+\end{example}
+The purpose of this example is to consider the assumption we made: and observer in a particular frame can measure the time that and event happens in his or her frame. \\
+% At some point revisit the experiments and inlcude the derivation for time dilation
+\section{Einstein's Theory of Relativity}
+\textbf{Einstein's Postulates}
+\begin{enumerate}
+	\item The principal of relativity. The test of a physical law by any experiment carried out in a uniformly moving frame of reference does not depend of the speed of that frame relative to any other frame moving uniformly with respect to it. 
+	\item The priciple of constancy. There exists a frame of reference $ S $ (call it the rest frame) with respect to which the speed of light is $ c $. The speed is then also $ c $ in every other frame of reference moving uniformly with respect to $ S $. The implies that the speed of light is independent of the motion of the source. 
+\end{enumerate}
+\textbf{Time Dilation}
+\[ t = t' \dfrac{1}{\sqrt{1 - v^2 / c^2}}  \]
