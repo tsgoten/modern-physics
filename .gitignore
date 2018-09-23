@@ -4,3 +4,5 @@ main/main.log
 main/main.synctex.gz
 main/main.aux
 main/main.toc
+main/.DS_Store
+main/chapters/*.log
