@@ -1,4 +1,0 @@
-\contentsline {chapter}{\numberline {1}The Basics of Relativity}{2}
-\contentsline {section}{\numberline {1.1}Background}{2}
-\contentsline {section}{\numberline {1.2}Einstein's Special Theory of Relativity}{3}
-\contentsline {section}{\numberline {1.3}Lorentz Transformations}{3}
