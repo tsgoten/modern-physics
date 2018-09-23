@@ -7,4 +7,4 @@ If you wish to contribute to my notes or tests send in a pull request with your 
 If you want to work on a shared test contact me, and I can add you as a collaborator. 
 If you find any errors in my work you can begin an issue and I will take a look at it. 
 #### Source
-Anyone is free to use my code and notes, there is no need to give me formal credits. 
+Anyone is free to use my code and notes, I just request that you star this repository if you do use it :)
