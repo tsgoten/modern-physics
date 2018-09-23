@@ -13,7 +13,7 @@ This chapter deals with unaccelerated motion, special relativity. General relati
 \end{example}
 The purpose of this example is to consider the assumption we made: and observer in a particular frame can measure the time that and event happens in his or her frame. \\
 % At some point revisit the experiments and inlcude the derivation for time dilation
-\section{Einstein's Theory of Relativity}
+\section{Einstein's Special Theory of Relativity}
 \textbf{Einstein's Postulates}
 \begin{enumerate}
 	\item The principal of relativity. The test of a physical law by any experiment carried out in a uniformly moving frame of reference does not depend of the speed of that frame relative to any other frame moving uniformly with respect to it. 
@@ -34,5 +34,21 @@ A length \textit{in its own rest frame} is called the \textbf{proper length}. Th
 Lorentz transformations take the four coordinates $ (x,y,z,t) $ that describe an "event," something that occurs at a definite point in space and at a definite time. \\ 
 The factor $ 1/\sqrt{q - v^2 /c^2} $ is used so often we will define
 \[ \gamma  \equiv \dfrac{1}{\sqrt{1-v^2/c^2}} \]
-We can express the spatial Lorentz transformation as
+We can express the \textbf{spatial} Lorentz transformation as
 \[ x' = \gamma (x-vt) \]
+The Lorentz transformation for \textbf{time} is
+\[ t' = \gamma \left[t - \dfrac{v}{c^2}x\right] \]
+\begin{example}
+	Consider a spaceship of proper length $ 100 $m that moves along the positive $ x- $axis at $ 0.9c $ with respect to the ground. If $ S $ is a coordinate frame fixed to the ground and $ S' $ is a coordinate frame fixed to the ship, the origins are set so that at $ t = t' = 0$ the front of the ship is at $ x = x' =0 $. Where is the back of the ship at $ t = 0 $, according to an observer on the ground, and at $ t = 0 $ what time $ T' $ will a clock fixed to the back of the ship read, according to a ground-based observer? Do the problem (a) classically and (b) according to special relativity.  \\
+	Classically, the answer is quite obvious. When the tip of the ship crosses $ x = 0 $ and time, $ t = 0 $ then the time at the back will also be $ T' =0 $. \\
+	According to special relativity, these events do not happen at the same time. We can look at the distinct events that occur, and see we need to use both the time and spatial Lorentz transformation. 
+	\begin{gather*}
+		x' = \gamma(x-v(0))= \gamma x \\
+		x = x'/\gamma \\
+		\intertext{Now to use the time transformation}
+		t' = \gamma\left[0 - \dfrac{v}{c^2}x\right] = \gamma\left[0 - \dfrac{v}{c^2} \dfrac{x'}{\gamma}\right] \\
+		t' = \dfrac{0.9}{c} x' \\
+		t' = \dfrac{0.9}{\scinot{3}{8}} 100 \\
+		T' = \scinot{3}{-7} \mbox{s}
+	\end{gather*}
+\end{example}
