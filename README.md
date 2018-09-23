@@ -8,3 +8,5 @@ If you want to work on a shared test contact me, and I can add you as a collabor
 If you find any errors in my work you can begin an issue and I will take a look at it. 
 #### Source
 Anyone is free to use my code and notes, I just request that you star this repository if you do use it :)
+#### Textbook
+[Modern Physics](https://www.amazon.com/Modern-Physics-Jeremy-Bernstein/dp/0139553118/ref=sr_1_1?ie=UTF8&qid=1537673324&sr=8-1&keywords=modern+physics+bernstein) (Jeremy Bernstein, Paul M. Fishbane, and Stepen Gasiorowicz)
