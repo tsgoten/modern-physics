@@ -53,3 +53,52 @@ The Lorentz transformation for \textbf{time} is
 	\end{gather*}
 \end{example}
 \section{Simultaneity and Relativity}
+Simply put, simultaneity refers to the idea that two spatially separated events occur at the same time - is not absolute, but depends on the observer's reference frame. 
+\begin{example}
+	Consider two observers one on the train the other on the platform. \\ 
+	A flash of light is given off at the center of the traincar just as the two observers pass each other. For the observer on board the train, the front and back of the traincar are at fixed distances from the light source and as such, according to this observer, the light will reach the front and back of the traincar at the same time. \\
+	For the observer standing on the platform, on the other hand, the rear of the traincar is moving (catching up) toward the point at which the flash was given off, and the front of the traincar is moving away from it. As the speed of light is finite and the same in all directions for all observers, the light headed for the back of the train will have less distance to cover than the light headed for the front. Thus, the flashes of light will strike the ends of the traincar at different times. \\
+	This is unexpected because in classical physics we would have assumed that light hits either side of the traincar irrespective of the frame, but such is not the case because of the strange behavior of light: light speed is constant in all frames. 
+\end{example}
+\section{The Relativistic Doppler Shift}
+When dealing with \textit{length contraction} and \textit{time dilation} it is reasonable to consider the affect these have on light, specifically light's wavelength and frequency. \\
+Time dilation takes the equation \[ t = \gamma t' \] and in classical physics the angular dependent Doppler shift for the frequence $ f $ takes the form \[ f' = f(1-\cos(\theta) v/c) \] thus in special relativity it becomes \[ f' = f\gamma \left[1 - \cos(\theta) v/c\right] \] Note that $ \theta = 0 $ is when the source and detector are moving apart, and $ \theta = \pi $ is when they are moving towards each other. 
+\begin{example}
+	At what speed would a motorist in a very fast car have to go so that he or she would see a red traffic light as green? We assume that the light looks red when the motorist is at rest. Take a wavelength of $ 650 $ nm for red light and $ 530 $nm for green. \\
+	
+	We can use 
+	\[ f' = f\gamma \left[1 - \cos(\theta) v/c\right] \]
+	and since the motorist is moving towards the traffic light $ \theta = \pi $ thus 
+	\[ \dfrac{f}{f'} = \dfrac{1 + v/c}{\sqrt{1 - v^2/c^2}} = \sqrt{\dfrac{1 + v/c}{1 - v/c}}\]
+	we can use $ v = f\lambda $ to square both sides and find 
+	\begin{align*}
+	\frac { v } { c } = \frac { \left( \lambda / \lambda ^ { \prime } \right) ^ { 2 } - 1 } { \left( \lambda / \lambda ^ { \prime } \right) ^ { 2 } + 1 } = \frac { ( 650 / 530 ) ^ { 2 } - 1 } { ( 650 / 530 ) ^ { 2 } + 1 } = 0.20
+	\end{align*}
+\end{example}
+\section{Relativistic Velocity Addition}
+The usual Galilean addition of velocity follows (note the primes are not derivatives, but velocity in the $ S' $ frame.)
+\[ u ^ { \prime } = \frac { d x ^ { \prime } } { d t ^ { \prime } } = \frac { d x ^ { \prime } } { d t } \frac { d t } { d t ^ { \prime } } = u - v \]
+but it is expected that this will change in special relativity. \\
+if we use the Lorentz transformations: 
+\begin{itemize}
+	\item $ x' = \lambda(v)(x-vt) $
+	\item $ t' = \lambda(v)[t-(v/c^2)x] $
+\end{itemize}
+First, 
+\[ \dfrac{dx'}{dt} = \lambda(v)(u-v)\]
+remember $ u = dx/dt $\\
+and
+\[ \dfrac{dt'}{dt} = \lambda(v)[1-(v/c^2)u] \]
+so 
+\[ u' = \dfrac{u-v}{1-(v/c^2)u} \]
+where $  u' = dx'/dt' $ is the speed in the $ S' $ frame. 
+
+
+
+
+
+
+
+
+
+
