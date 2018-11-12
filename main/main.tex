@@ -1,4 +1,4 @@
-\documentclass[12pt, letterpaper, twocolumn]{report}
+\documentclass[11pt, letterpaper, twocolumn]{report}
 %Packages
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
@@ -25,6 +25,9 @@
 }
 \newcommand{\scinot}[2]{
 	#1 \times 10^{#2}
+}
+\newcommand{\scinotu}[3]{
+	#1 \times 10^{#2}{\mathrm{#3}}
 }
 \begin{document}
     \begin{titlepage}

@@ -22,3 +22,100 @@ is what is usually called Planck's constant.
 	$ n  = 3 \times 10 ^ { 20 } \mathrm { photons } / \mathrm { s }$
 \end{example}
 \section{Photoelectric Effect}
+Metals contain a large number of free electrons (sea of electrons).The electrons don't leak but when a photon strikes one of the free electrons the photon may under the right circumstance trigger the electron to escape the metal. \\
+Electrons emitted by a metal are called \textbf{photoelectrons}. The \textbf{work function} $ W $ of the metal tells the values for which there will be a current. \\
+if $ hf $ is larger than $ W $, then the electrons will emerge with speed $ v $ such that
+\[ \dfrac{1}{2} m_e v^2 = hf -W \]
+The $ KE $ of an electron is independent of intensity. 
+\begin{example}
+	EM radiation of wavelength $ 270 \mathrm{ nm } $ on aluminum releases photoelectrons. The most energetic of which are stopped by a potential difference of $ 0.406 $ volts. Calculate work function of aluminum in electron volts. \\
+	The energy can be found for the electron using
+	\[ K = e V = \left( 1.6 \times 10 ^ { - 19 } \mathrm { C } \right) ( 0.406 \mathrm { V } ) \] \[ = 0.65 \times 10 ^ { - 10 } \mathrm { J } \]
+	energy for the photon
+	\[ E = h f = \frac { h c } { \lambda } = \] \[ \left( 6.63 \times 10 ^ { - 4 } \mathrm { J } \cdot \mathrm { s } \right) \left( 3.00 \times 10 ^ { 8 } \mathrm { m } / \mathrm { s } \right)\] \[ / \left( 270 \times 10 ^ { - 9 } \mathrm { m } \right) = 737 \times 10 ^ { - 19 } \mathrm { J } \]
+	the difference is the work function
+	\[ W = E - K = 6.72 \times 10 ^ { - 19 } \mathrm { J }\] \[ = \left( 6.72 \times 10 ^ { - 19 } \mathrm { J } \right) / \left( 1.6 \times 10 ^ { - 19 } \mathrm { J } / \mathrm { eV } \right) = 42 \mathrm { eV } \]
+\end{example}
+\section{The Compton Effect}
+Consider collisions between light and free electrons. That is, 
+\[ \gamma + e \rightarrow \gamma + e \]
+Let the initial electron be at rest with zero momentum and energy 
+\[ m_ec^2 \]
+Initially, the photon has energy
+\[ hf \]
+associated with it is a momentum $ \vec{ \mathrm { q } } $ whose initial magnitude is 
+\[ | \vec{ \mathrm { q } }| = hf/c \]
+After the collision the photon's energy is $ hf' $ and momentum is $ \vec{ \mathrm { q } }' $.\\
+The final electron momentum is \[ \vec{ \mathrm { p } } \] and its energy is 
+\[ \sqrt { p ^ { 2 } c ^ { 2 } + m _ { e } ^ { 2 } c ^ { 4 } } \]
+conservation of momentum gives us
+\[ \vec { q } = \vec { q } ^ { \prime } + \vec { p } \]
+and
+\[ h f + m _ { e } c ^ { 2 } = h f ^ { \prime } + \sqrt { p ^ { 2 } c ^ { 2 } + m _ { e } ^ { 2 } c ^ { 4 } } \]
+So the obvious question is, now what does the light \textit{look} like: what's is wavelength $ \lambda' $?\\
+First we see
+\[ \begin{aligned} p ^ { 2 } & = \left( \vec { q } ^ { \prime } - \vec { q } \right) ^ { 2 } = q ^ { \prime 2 } + q ^ { 2 } - 2 \vec { q } ^ { \prime } \cdot \vec { q } \\ & = \left( \frac { h f ^ { \prime } } { c } \right) ^ { 2 } + \left( \frac { h f } { c } \right) ^ { 2 } - 2 \left( \frac { h f ^ { \prime } } { c } \right) \left( \frac { h f } { c } \right) \cos \theta \end{aligned} \]
+where $ \theta $ is the angle between the initial and final photon momentum vectors. After rearranging we find 
+\[ \begin{aligned} p ^ { 2 } + m _ { e } ^ { 2 } c ^ { 2 } & = \left( \frac { h f } { c } - \frac { h f ^ { \prime } } { c } + m _ { s } c \right) ^ { 2 } \\ & = \left( \frac { h f } { c } \right) ^ { 2 } + \left( \frac { h f ^ { \prime } } { c } \right) ^ { 2 } - 2 \left( \frac { h f } { c } \right) \left( \frac { h f ^ { \prime } } { c } \right) \\ & + 2 m _ { e } h \left( f - f ^ { \prime } \right) + m _ { e } ^ { 2 } c ^ { 2 } \end{aligned} \]
+substituting in values for $ p^2 $
+\[ 2 \left( \frac { h f } { c } \right) \left( \frac { h f ^ { \prime } } { c } \right) ( 1 - \cos \theta ) = 2 m _ { e } h c \left( \frac { f } { c } - \frac { f ^ { \prime } } { c } \right) \]
+By using the general relation $ f = c/\lambda $, we easily find that
+\[\lambda ^ { \prime } - \lambda = \frac { h } { m _ { e } c } ( 1 - \cos \theta )  \]
+This expression tells the \textit{change} $ \Delta \lambda $ after scattering. \\
+The parameter 
+\[ \frac { h } { m _ { e } c } \]
+obviously results in the dimension of length and is called the \textbf{Compton wavelength of the electron}. It's magnitude is
+\[ \scinotu{2.4}{-12}{m} \]
+\begin{example}
+	X ray of $ \lambda = \scinotu{5.53}{-2}{nm} $ is scatter and detected at an angle of $ 35^ \circ $. Find the fractional shift of the wavelength. \\
+	\small
+	\[ \begin{aligned} \frac { \lambda ^ { \prime } - \lambda } { \lambda } = \frac { h } { m _ { e } c \lambda } ( 1 - \cos \theta ) \\  = \frac { \left( 6.63 \times 10 ^ { - 34 } \mathrm { J } \cdot \mathrm { s } \right) \left( 1 - \cos \left( 35 ^ { \circ } \right) \right) } { \left( 0.91 \times 10 ^ { - 30 } \mathrm { kg } \right) \left( 3.00 \times 10 ^ { 8 } \mathrm { m } / \mathrm { s } \right) \left( 5.53 \times 10 ^ { - 11 } \mathrm { m } \right) } \\ = 7.9 \times 10 ^ { - 3 } \text { . } \end{aligned} \]
+	\normalfont
+	around a $ 1\% $ shift 
+\end{example}
+\section{Blackbody Radiation}
+What is a blackbody radiation?\\
+Black-body radiation is the thermal electromagnetic radiation within or surrounding a body in thermodynamic equilibrium with its environment, or emitted by a black body
+Okay...what's a blackbody then?\\
+blackbody is an idealized physical body that absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence. \\
+Cool.\\
+The blackbody spectrum roughly peaks at 
+\[ f _ { \operatorname { man } } = ( 28 ) \frac { k T } { h } = \left( 5.9 \times 10 ^ { 10 } / \mathrm { K } \cdot \mathrm { s } \right) T \]
+a result known as \textbf{\textit{Wein displacement law}}.\\
+There is also a maximum $ \lambda_{max} $ (Note: that $ \lambda_{max} \neq c/f_{max} $)
+\[ \lambda _ { \max } T = 2.9 \times 10 ^ { - 3 } \mathrm { m } \cdot \mathrm { K } \]
+\indent This presence of such a maximum gives the prominent color to the radiation of a blackbody. For example, the Sun's surface is at some $ 6000 $K. The maximum wavelength is about $ 480 $nm, the middle range of the human eye, Coincident?! I think not! It actually is not. 
+\section{Consequence of Particles as Waves}
+Everything is basically a wave. You can use 
+\[ \lambda = \dfrac{h}{p} \]
+for anything, like dust particles, Ferraro, and ice cream. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
