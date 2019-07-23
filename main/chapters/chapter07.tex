@@ -1,0 +1,42 @@
+\chapter{Wave Packets and the Uncertainty Principle}
+\putpic{uncertainty-principle}
+\section{A Free Electron in ONe Dimension}
+Schrodinger Equation is
+\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave + V(x)\wave\]
+The time independent form wave equation is 
+\[ \wave = u_E(x) \exp(\frac{-iEt}{\hbar}) \]
+Since, Schrodinger's equation is a relationship between a function and it's second derivative we can try to express it like a spring function. the wave function as a second order differential equation of the form 
+\[ f'' + k^2f = 0 \]
+The Time-Independent Schrodinger Equation gives 
+\[ Eu(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+Which we can express in the form
+\[ f'' + k^2 f = 0 \]
+So, we find
+\[ \diff{u(x)}{x}{2} + \frac{p^2}{\hbar^2} u(x) = 0  \]
+Giving us
+\[ k = \pm \frac{p}{\hbar} \]
+or 
+\[ p = \pm \hbar k \]
+One important step is to normalize the wave function. That is 
+\[ insert \]
+\section{Wave Packets}
+Solving for the probability distribution for the wave function gives 
+\[ \Delta x = 4 \pi \hbar / \Delta p \]
+the superposition of plane waves made up of weights that cover a finite range of momenta $ \Delta p $ is known as a wave packet. 
+\section{Gaussian Wave Packet}
+A wave packet without dispersion (real or imaginary part)
+A wave packet with dispersion
+In physics, a wave packet (or wave train) is a short "burst" or "envelope" of localized wave action that travels as a unit. 
+\section{The Meaning of Uncertainty Relations}
+\begin{example}
+	Consider a grain of dust of mass $ \scinot{1}{-7} $ moving with a velocity around $ 10 m/s $ suppose that the measuring instrument has a local uncertainty of $ \scinot{1}{-6} m $, Find the intrinsic uncertainty in position. 
+	\begin{align*}
+	\begin{array} { c } { \Delta p = m \Delta v = \left( 10 ^ { - 7 } \mathrm { kg } \right) \left( 10 ^ { - 6 } \mathrm { m } / \mathrm { s } \right) = 10 ^ { - 13 } \mathrm { kg } \cdot \mathrm { m } / \mathrm { s } } \\ \intertext { Hence, according to the uncertainty relation, the position could at best be measured to within a window}\\ { \Delta x \equiv \frac { \hbar } { \Delta p } = \frac { \left( 1.05 \times 10 ^ { - 34 } \mathrm { J } \cdot \mathrm { s } \right) } { \left( 10 ^ { - 13 } \mathrm { kg } \cdot \mathrm { m } / \mathrm { s } \right) } \equiv 10 ^ { - 21 } \mathrm { m } } \end{array}
+	\end{align*}
+\end{example}
+\section{The Time Energy Uncertainty Relation}
+An extension of the previous uncertainty principle is time and energy. \\
+\begin{align}
+\begin{array} { c } { \Delta E = v \Delta p \geq v \frac { \hbar / 2 } { \Delta x } = \frac { \hbar / 2 } { ( \Delta x / v ) } = \frac { \hbar / 2 } { \Delta t } } \\ { \Delta E \Delta t \geq \hbar / 2 } \end{array}
+\end{align}
+Consider the case where the time interval is so short that the energy can be low enough to dissassociate and then come back together. 

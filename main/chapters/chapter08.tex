@@ -1,0 +1,289 @@
+
+\chapter{Barriers and Wells}
+	Classically, we expect that when a particle with fixed momentum and energy approaches a potential barrier then it will get either reflected or transmitted. In quantum mechanics, we see that this does not actually happen and a certain amount will get transmitted and reflected. This should be a little more obvious considering that we understand the particles are a wave as well, so in this case since the wavelength is so much larger we can expect it to behave like this around the potential barrier. \\
+An interesting consequence is tunneling, when a particle goes through the potential barrier.
+\section{Particle Motion in the Presence of a Potential Barrier}
+A one-dimensional potential barrier is formed by a potential-energy function of the form
+\[ V(x) = \begin{cases}
+0 \text{ for } x < -a \\
+V_0 \text{ for } -a < x < a \\
+0 \text{ for } x > +a 
+\end{cases} \]
+\putpic{bar}
+We basically have to cases arise. \\
+If $ E > V_0 $ then the particle will pass trough the barrier, but as the particle passes through we realize that the energy is reduced. Initially, the energy of the particle is given by 
+\[ E = \frac{p^2}{2m} \] but with the potential barrier we have \[ E = \frac{p^2}{2m} + V_0\]
+Solving for the momentum we find that it is reduced to 
+\[ p = \sqrt{2m(E-V_0)} \]
+If $ E < V_0 $ then the particle hits a wall and is reflected back to the left. 
+\putpic{tunel}
+\section{Wave Functions in the Presence of a Potential Barrier}
+We can see how what is described qualitatively is realized through solving Schrodinger's equation. \\
+With the notation
+\[ k = p/\hbar \]
+In region I the Schrodinger equation is
+\[ \diff{u(x)}{x}{2} + \frac{2m}{\hbar ^2} E u(x) = 0 \]
+where $ E = \hbar^2k^2/2m $. We expect that in region I, because of the presence of the potential, we will have a wave function that represent the incoming wave and a possible reflected wave. This wave function will have the same time independent factor
+\[ \exp(-iEt/\hbar) \]
+which we can drop. Thus we have\\
+Region I
+\[ u(x) = \exp(ikx) + R \exp(-ikx) \]
+For region II the Schrodinger equation is
+\[ \diff{u(x)}{x}{2} + \frac{2m}{\hbar ^2} (E-V_0) u(x) = 0 \]
+The second part is negative because of the negative momentum. Simply, $ R $ is how much of the incident wave is reflected. \\
+instead of $ k $ we use $ q $ where
+\[ q^2 = \frac{2m}{\hbar^2} (E - V_0)\]
+For $ q $ we will get a $ \pm $ so we have two coefficients accordingly for that
+\[ u(x) = A \exp (iqx) + B \exp(-iqx) \]
+In Region III, the only part of the wave that's coming out is the transmitted part so we know the equation will be 
+\[ u(x) = T \exp (iqx)  \]
+To solve for the coefficients the one restriction we have is that we expect the probability distribution to be continuous, so we set the restriction that the first derivative must be continuous everywhere. Since, the equation was formed from the function and its second derivative this is a reasonable expectation. 
+\begin{example}
+	Solve for $ R $ and $ T $ \\
+	\begin{align}
+	\begin{array} { c } { R = \frac { i \left( q ^ { 2 } - k ^ { 2 } \right) \sin ( 2 q a ) } { 2 k q \cos ( 2 q a ) - i \left( k ^ { 2 } + q ^ { 2 } \right) \sin ( 2 q a ) } \exp ( - 2 i k a ) } \\ { T = \frac { 2 k q } { 2 k q \cos ( 2 q a ) - i \left( k ^ { 2 } + q ^ { 2 } \right) \sin ( 2 q a ) } \exp ( - 2 i k a ) } \end{array}
+	\end{align}
+	The interesting point is that even for $ E > V_0 $ the above equations do no equal zero. 
+\end{example}
+\begin{example}
+	\putpic{step}
+	Consider a beam of electrons traveling to the right along the $ x $-axis with energy $ E $. The potential energy is $ V = 0 $ for $ x < 0 $ but at $ x = 0 $ there is a potential "step" and the potential energy increases to (positive) $ V_0 $ for $ x > 0 $ Assuming that $ E > V_0 $ calculate the reflection and transmission coeffients, and show the flux is conserved. \\
+	We basically have at the point $ x = 0 $
+	\[ u(x) = \exp(ikx) + R \exp(-ikx) \]
+	and
+	\[ u(x) = T \exp(iqx) \]
+	Taking the derivative of each reveals 
+	\[ \dif{u(x)}{x} = ik\exp(ikx) - ikR \exp(-ikx) \]
+	\[ \dif{u(x)}{x} = ik T \exp(iqx) \]
+	For the value of $ x = 0 $ we get 
+	\begin{align*}
+	u(0) &= 1 + R \\
+	&= T \\
+	\intertext{and}
+	\dif{u(0)}{x} &= ik - ikR \\
+	&= iqT
+	\end{align*}
+	Leaving us with two equations
+	\[ T = 1 + R \]
+	\[ k - kR = qT \]
+	We can rearrange the second one and get
+	\begin{align*}
+	\frac{k}{q} (1 - R) = T = 1 +R \\
+	k - Rk = q + Rq \\
+	\frac{k-q}{k+q} = R \\
+	\frac{2k}{k+q} = T
+	\end{align*}
+\end{example}
+
+\section{Tunneling through the Potential Barrier}
+ Suppose that the incoming energy $ E < V_0 $. So, 
+ \[ q^2 = \frac{2m}{\hbar^2} (E-V_0) < 0 \]
+ Obviously $ q $ is complex. So, we rewrite it as 
+ \[ q \rightarrow i \kappa \]
+ \[ \kappa^2 = \frac{2m}{\hbar^2} (V_0 - E) \]
+We can then just plug in the other form of $ q $ and adjust our solutions for the coefficients. 
+\begin{example}
+	Consider a $ 2000 $kg truck moving towards a bump in the road whose center is at $ x = 0 $ and whose height is given by $ 0 $ for $ x<-0.1 $m, $ (0.05m)\cos(5 \pi x)  $ for $ -0.1m < x < +0.1m $. Assuming that the truck moves so slowly that its kinetic energy is insufficient to climb the bump to any height at all, estimate the probability for the truck to tunnel through the bump. \\
+	The probability transmission is only dependent on $ |T|^2 $ so we have 
+	\begin{align*}
+	\begin{aligned} | T | ^ { 2 } & \cong \exp \left( - \frac { 2 } { \hbar } \int \sqrt { 2 m V ( x ) } d x \right) \\ & = \exp \left( - \frac { 2 \sqrt { 2 ( 2,000 k g ) ( 2,000 k g ) \left( 9.8 m / s ^ { 2 } \right) ( 0.05 m ) } } { 1.05 \times 10 ^ { - 34 } J \cdot s } \right. \end{aligned}
+	\end{align*}
+	The remaining integral is then given by
+	\begin{align*}
+	\frac { 1 } { 5 \pi } [ \sin ( 0.5 \pi ) - \sin ( - 0.5 \pi ) ] = \frac { 2 } { 5 \pi } \cong 0.13
+	\end{align*}
+	Substituting into the expression for $ |T|^2 $ yields the rest of therms so we get that 
+	\[ |T|^2 \approxeq \exp(\scinot{-5}{36}) \]
+	Since, Planck's constant is so small for macro scales it is basically zero. 
+\section{Bound States}
+	We are interested in how the Schrodinger Equation determines the energies of the trapped states that occur in an infinite well. 
+\end{example}
+\section{Problems 6-8}
+\begin{q}
+	Express the wave function as an integral of finding a particle in all of space.
+\end{q}
+\begin{q}
+	State the expected form of Schrodinger's equation.
+\end{q}
+\begin{q}
+	Derive the time independent Schrodinger Equation
+\end{q}
+\begin{q}
+	What is the Hamiltonian
+\end{q}
+\begin{q}
+	Arrive at the expression of momentum as an operator
+\end{q}
+\begin{q}
+	Derive the time independent Schrodinger Equation
+\end{q}
+\begin{q}
+	State Schrodinger's equation in Three Dimensions
+\end{q}
+\begin{q}
+	Use the time dependent Schrodinger's equation to express the wave function as a second order differential equation of the form 
+	\[ f'' + x^2f = 0 \]
+\end{q}
+\begin{q}
+	State Heisenberg's Uncertainty Relation
+\end{q}
+\begin{q}
+	Arrive at the Time-Energy Uncertainty Relation
+\end{q}
+\begin{q}
+	Wave function at the presence of a barrier. Consider some potential barrier in Region II. Region I is before the potential barrier and Region III is after the potential barrier.\\
+	State the Schrodinger Equation in each Region and the form of the wave function.
+\end{q}
+\begin{q}
+	Solve for the reflection and transmission coefficient.
+\end{q}
+\begin{q}
+	Consider a beam of electrons traveling to the right along the $ x$-axis with energy $ E $. The potential energy is $ V = 0 $ for $ x < 0 $, but as $ x = 0 $ there is a potential step, and the potential energy increases to $ V_0 $ for $ x > 0 $. Assuming $ E > V_0 $ (a) calculate the reflection and transmission coefficients, and (b) show that flux is conserved. 
+\end{q}
+\begin{q}
+	Consider a $ 2000 $kg truck moving towards a bump in the road whose center is at $ x = 0 $ and whose height is given by $ 0 $ for $ x<-0.1 $m, $ (0.05m)\cos(5 \pi x)  $ for $ -0.1m < x < +0.1m $. Assuming that the truck moves so slowly that its kinetic energy is insufficient to climb the bump to any height at all, estimate the probability for the truck to tunnel through the bump.
+\end{q}
+\section{Solutions}
+	\begin{ans}
+	Probability of finding a particle in ALL of space is obviously one. 
+	\[ \int\limits_{all space} | \psi(x,t) | ^2 d^3\vec{r}= 1 \]
+\end{ans}
+\begin{ans}
+	The wave function $ \wave $ has to follow the linear relation with it's derivative
+	\[ \frac{d \wave}{dt} = [some constant] \wave \]
+	So we can expect it to be the form of some exponential. 
+\end{ans}
+\begin{ans}
+	Based on our expectation of the form of the equation, the wave function is
+	\[ \wave = \exp(kx - \omega t) \]
+	Where $ k = \dfrac{\lambda}{2 \pi} = \dfrac{h}{2 \pi p} = \dfrac{\hbar}{p}$ and $ \omega = 2 \pi f $ which using $ E = hf $ gives $ \omega = \dfrac{2 \pi E}{h} = \dfrac{E}{\hbar} $
+	We then find that expecting a plane wave function gives us 
+	\[ \wave = \exp(i\frac{px-Et}{\hbar}) \]
+	Taking the first derivative with respect to time and the second derivative with respect to $ x $ we find
+	\[ \dif{\wave}{t} =  \frac{-iE}{\hbar} \wave\]
+	\[ \diff{\wave}{x}{2} = \frac{p^2}{h^2} \wave\]
+	Using $ E = p^2/2m $ for a free particle we can relate the two functions and get the Time Dependent Schrodinger equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave \]
+	If we consider some potential $ V(x) = V_0 $, that will be a part of the energy giving us the complete equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave + V(x)\wave\]
+\end{ans}
+\begin{ans}
+	The Hamiltonian is the the operator that only deals with the position part of the Schrodinger equation, and describes the position of the wave function. 
+	$$ H = -\frac{\hbar^2}{2m} \diff{}{x}{2}  + V(x) $$
+\end{ans}
+\begin{ans}
+	From the calculation in Problem 3 we can show that
+	\[ -i \hbar \dif{}{x} \wave = p \wave \]
+	\[ p = -i\hbar \dif{}{x} \]
+\end{ans}
+\begin{ans}
+	We begin with the Time-Independent Schrodinger equation and use a technique called separation of variables for $ \wave $ to express it as a function of just $ x $. \\
+	We express the wave function as
+	\[ \wave = u(x)T(t) \]
+	Then we use this form in the Schrodinger equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{\hbar^2}{2m} \diff{}{x}{2} \wave \]
+	We then find
+	\[ i\hbar \dif{T(t)}{t} u(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} T(t)\]
+	We can rearrange it as
+	\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} \]
+	Notice that each side of the equation sign is dependent on only $ x $ or $ t $. This means that both sides have to be equal no matter the value of $ x $ or $ t $. Which means that both sides must be a constant, represented by $ E $. So, 
+	\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} = E\]
+	So the Time-Independent Schrodinger equation is 
+	\[ Eu(x) =  -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+	or
+	\[ Eu(x) = Hu(x) \]
+	We complete this by solving for $ T(t) $ which is 
+	\[ \dif{T(t)}{t} = \frac{-i E}{\hbar} T(t) \]
+	So, $ T(t) $ must be
+	\[ T(t) = \exp(\frac{-iEt}{\hbar}) \]
+	giving us the wave function as
+	\[ \wave = u_E(x) \exp(\frac{-iEt}{\hbar}) \]
+\end{ans}
+\begin{ans}
+	Deriving in Three Dimensions is not that difficult but with basic understanding of gradient we can get that it is 
+	\[ i \hbar \dif{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \nabla^2 \cdot \psi(\vec{r}, t) + V(\vec{r}) \cdot \psi(\vec{r}, t) \]
+\end{ans}
+\begin{ans}
+	The Time-Independent Schrodinger Equation gives 
+	\[ Eu(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+	Which we can express in the form
+	\[ f'' + \omega^2 f = 0 \]
+	So, we find
+	\[ \diff{u(x)}{x}{2} + \frac{p^2}{\hbar^2} u(x) = 0  \]
+	Giving us
+	\[ \omega = \pm \frac{p}{\hbar} \]
+\end{ans}
+\begin{ans}
+	Based on observational results and modifying the Schrodinger Equation we find
+	\[ \Delta p \Delta x \leq \dfrac{\hbar}{2} \]
+\end{ans}
+\begin{ans}
+	With some 
+	\begin{align}
+	\begin{array} { c } { \Delta E = v \Delta p \geq v \frac { \hbar / 2 } { \Delta x } = \frac { \hbar / 2 } { ( \Delta x / v ) } = \frac { \hbar / 2 } { \Delta t } } \\ { \Delta E \Delta t \geq \hbar / 2 } \end{array}
+	\end{align}
+\end{ans}
+\begin{ans}
+	Region I:
+	A combination of the initial wave and the part being reflected back. 
+	From Problem 8 we know that $ \omega = \pm p/\hbar $, so we state that the wave function must be of the form 
+	\[ u(x) = exp(ikx) \]
+	where 
+	\[ k = p/\hbar \]
+	So the wave function in region I must be 
+	$$ u(x) = \exp(ikx) + R\exp(-ikx) $$
+	For region II since there is a potential so we have
+	\[ \diff{u(x)}{x}{2} + \frac{(E-V_0) 2m}{\hbar^2} u(x) \]
+	We can set $ q $ as 
+	\[ q = \pm \sqrt\frac{(E-V_0) 2m}{\hbar^2} \]
+	So we have the function as
+	\[ u(x) = A \exp (ikx) + B \exp (-ikx) \]
+	For region III since the energy is the same as region I, but there is only the wave being transmitted we have 
+	\[ u(x) = T \exp(ikx)\]
+\end{ans}
+\begin{ans}
+	\begin{align}
+	\begin{array} { c } { R = \frac { i \left( q ^ { 2 } - k ^ { 2 } \right) \sin ( 2 q a ) } { 2 k q \cos ( 2 q a ) - i \left( k ^ { 2 } + q ^ { 2 } \right) \sin ( 2 q a ) } \exp ( - 2 i k a ) } \\ { T = \frac { 2 k q } { 2 k q \cos ( 2 q a ) - i \left( k ^ { 2 } + q ^ { 2 } \right) \sin ( 2 q a ) } \exp ( - 2 i k a ) } \end{array}
+	\end{align}
+\end{ans}
+\begin{ans}
+	We basically have at the point $ x = 0 $
+	\[ u(x) = \exp(ikx) + R \exp(-ikx) \]
+	and
+	\[ u(x) = T \exp(iqx) \]
+	Taking the derivative of each reveals 
+	\[ \dif{u(x)}{x} = ik\exp(ikx) - ikR \exp(-ikx) \]
+	\[ \dif{u(x)}{x} = ik T \exp(iqx) \]
+	For the value of $ x = 0 $ we get 
+	\begin{align*}
+	u(0) &= 1 + R \\
+	&= T \\
+	\intertext{and}
+	\dif{u(0)}{x} &= ik - ikR \\
+	&= iqT
+	\end{align*}
+	Leaving us with two equations
+	\[ T = 1 + R \]
+	\[ k - kR = qT \]
+	We can rearrange the second one and get
+	\begin{align*}
+	\frac{k}{q} (1 - R) = T = 1 +R \\
+	k - Rk = q + Rq \\
+	\frac{k-q}{k+q} = R \\
+	\frac{2k}{k+q} = T
+	\end{align*}
+\end{ans}
+\begin{ans}
+	The probability transmission is only dependent on $ |T|^2 $ so we have 
+	\begin{align*}
+	\begin{aligned} | T | ^ { 2 } & \cong \exp \left( - \frac { 2 } { \hbar } \int \sqrt { 2 m V ( x ) } d x \right) \\ & = \exp \left( - \frac { 2 \sqrt { 2 ( 2,000 k g ) ( 2,000 k g ) \left( 9.8 m / s ^ { 2 } \right) ( 0.05 m ) } } { 1.05 \times 10 ^ { - 34 } J \cdot s } \right. \end{aligned}
+	\end{align*}
+	The remaining integral is then given by
+	\begin{align*}
+	\frac { 1 } { 5 \pi } [ \sin ( 0.5 \pi ) - \sin ( - 0.5 \pi ) ] = \frac { 2 } { 5 \pi } \cong 0.13
+	\end{align*}
+	Substituting into the expression for $ |T|^2 $ yields the rest of therms so we get that 
+	\[ |T|^2 \approxeq \exp(\scinot{-5}{36}) \]
+	Since, Planck's constant is so small for macro scales it is basically zero. 
+\end{ans}
+

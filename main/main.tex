@@ -1,27 +1,32 @@
+%INSTRUCTIONS ---> Go Here https://github.com/tsgoten/modern-physics-consice
+%Scroll down to the bottom; Beneath the \tableofcontents there are a bunch of commented lines
+%Uncomment the relevant line for your chapter to view the file
+
 \documentclass[11pt, letterpaper, twocolumn]{report}
 %Packages
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{physics, esdiff}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{graphicx, physics}
 %Information
-\author{Tarang Srivastava}
+\author{Shivam, Tarang, Matt, Rohil, Akshit, Danny}
 \title{A Concise Review of Modern Physics }
 %Theorems
 \theoremstyle{definition}
 \newtheorem{example}{Example}[section]
 \newtheorem{problem}{Problem}[section]
 \newtheorem{exercise}{}
-%\theoremstyle{theorem}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{q}{}[section]
+\newtheorem{ans}{}[section]
 %Graphics Path
 \graphicspath{{graphics/}}
+%Commands
+\newcommand{\dif}[2]{\frac{d#1}{d#2}}
+\newcommand{\diff}[3]{\frac{d^#3 #1}{d #2^#3}}
+\newcommand{\wave}{\psi (x,t)}
 \newcommand{\putpic}[1]{
+	\begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{#1}
+	\end{figure}
 }
 \newcommand{\scinot}[2]{
 	#1 \times 10^{#2}
@@ -29,6 +34,7 @@
 \newcommand{\scinotu}[3]{
 	#1 \times 10^{#2}{\mathrm{#3}}
 }
+
 \begin{document}
     \begin{titlepage}
         \begin{center}
@@ -46,14 +52,32 @@
 			Dr. Mesut \c{C}akir\\
 			Modern Physics\\
 			South Brunswick High School\\
-			20 April 2019
+			1 June 2019
 		\end{center}
     \end{titlepage}
 
     \tableofcontents
 
-    % Chapters
-    \input{chapters/chapter01.tex}
-    \input{chapters/chapter02.tex}
-   	\input{chapters/chapter03.tex}
+    % Chapters - EDIT THIS TO VIEW YOUR FILE
+    % Uncomment the line and name your file to compile
+    
+   	%\input{chapter01.tex}
+    \input{chapter02.tex}
+   	%\input{chapter03.tex}
+   	%\input{chapter04.tex}
+   	%\input{chapter05.tex}
+   	%\input{chapter06.tex}
+   	%\input{chapter07.tex}
+   	%\input{chapter08.tex}
+   	%\input{chapter09.tex}
+   	%\input{chapter10.tex}
+   	%\input{chapter11.tex}
+   	%\input{chapter12.tex}
+   	%\input{chapter13.tex}
+   	%\input{chapter14.tex}
+   	%\input{chapter15.tex}
+   	%\input{chapter16.tex}
+   	%\input{chapter17.tex}
+   	%\input{chapter18.tex}
+   	
 \end{document}

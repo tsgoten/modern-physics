@@ -1,0 +1,158 @@
+\chapter{The Schr\"{o}dinger Equation}
+\putpic{complex_conjugate}
+\section{Wave Functions and Probabilities}
+The core understanding arises in 
+\[ |\psi(\vec{r}, t)|^2 d^3 \vec{r} \]
+The probability of finding an electron in some space. \\
+We know that 
+\[ \int \limits_{all space} |\psi(\vec{r}, t)|^2 d^3 \vec{r}  = 1 \]
+This means that in all of space the probability of finding the electron is guaranteed, which is expected. Sometimes the wave function is not cleanly 1, in which case we normalize it. \\
+Based on the relationship between the wave function and its derivative we expect an equation of type the wave function $ \wave $ has to follow the linear relation with it's derivative
+\[ \frac{d \wave}{dt} = [some constant] \wave \]
+So we can expect it to be the form of some exponential.
+\section{The Form of Schrodinger Equation}
+
+We expect some sort of wave function since the particle exhibits wavelike features. This is usually a sine or cosine function, or a combination which we can conveniently express as an exponential. 
+\[ \wave = A [ \cos(kx - \omega t) + i \sin(kx - \omega t) ] \]
+We can represent this as
+\[ \wave = A\exp(i[kx - \omega t]) \]
+Where $ k = \dfrac{\lambda}{2 \pi} = \dfrac{h}{2 \pi p} = \dfrac{\hbar}{p}$ and $ \omega = 2 \pi f $ which using $ E = hf $ gives $ \omega = \dfrac{2 \pi E}{h} = \dfrac{E}{\hbar} $
+We then find that expecting a plane wave function gives us 
+\[ \wave = \exp(i\frac{px-Et}{\hbar}) \]
+Taking the first derivative with respect to time and the second derivative with respect to $ x $ we find
+\[ \dif{\wave}{t} =  \frac{-iE}{\hbar} \wave\]
+\[ \diff{\wave}{x}{2} = \frac{p^2}{h^2} \wave\]
+Using $ E = p^2/2m $ for a free particle we can relate the two functions and get the Time Dependent Schrodinger equation
+\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave \]
+If we consider some potential $ V(x) = V_0 $, that will be a part of the energy giving us the complete equation
+\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave + V(x)\wave\]
+
+\section{Expectations Value}
+Normalization. If the value of the integral is not equal to one then the coefficient has to be normalized to agree with this. For certain equations this is very difficult. \\
+For convenience the second part of the Schrodinger Equation is called the Hamiltonian. The Hamiltonian is the the operator that only deals with the position part of the Schrodinger equation, and describes the position of the wave function. 
+$$ H = -\frac{\hbar^2}{2m} \diff{}{x}{2}  + V(x) $$
+The equation can now be rewritten as 
+\[ i\hbar \dif{\wave}{t} = H \wave \]
+\section{The Time-Independent Schrodinger Equation}
+We can use Separation of Variables to separate the wave function $ \wave $. We will use a function for just position $ u(x)  $ and one for just time $ T(t) $. \\
+We begin with the Time-Independent Schrodinger equation and use a technique called separation of variables for $ \wave $ to express it as a function of just $ x $. \\
+We express the wave function as
+\[ \wave = u(x)T(t) \]
+Then we use this form in the Schrodinger equation
+\[ i\hbar \dif{\wave}{t} = -\frac{\hbar^2}{2m} \diff{}{x}{2} \wave \]
+We then find
+\[ i\hbar \dif{T(t)}{t} u(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} T(t)\]
+We can rearrange it as
+\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} \]
+Notice that each side of the equation sign is dependent on only $ x $ or $ t $. This means that both sides have to be equal no matter the value of $ x $ or $ t $. Which means that both sides must be a constant, represented by $ E $. So, 
+\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} = E\]
+So the Time-Independent Schrodinger equation is 
+\[ Eu(x) =  -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+or
+\[ Eu_E(x) = Hu_E(x) \]
+We complete this by solving for $ T(t) $ which is 
+\[ \dif{T(t)}{t} = \frac{-i E}{\hbar} T(t) \]
+So, $ T(t) $ must be
+\[ T(t) = \exp(\frac{-iEt}{\hbar}) \]
+giving us the wave function as
+\[ \wave = u_E(x) \exp(\frac{-iEt}{\hbar}) \]
+The solution of $ u_E(x) $ has a special property in that it is the eigenfunction of the operator H, and E is corresponding eigenvalue of that operator. When the eigenfunctions are solved for H, one will find the Bohr's atomic energy levels. 
+\section{The Schrodinger Equation in Three Dimensions}
+	Deriving in Three Dimensions is not that difficult but with basic understanding of gradient we can get that it is 
+\[ i \hbar \dif{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \nabla^2 \cdot \psi(\vec{r}, t) + V(\vec{r}) \cdot \psi(\vec{r}, t) \]
+\section{Chapter 6 Problems}
+	\begin{q}
+	Express the wave function as an integral of finding a particle in all of space.
+\end{q}
+\begin{q}
+	State the expected form of Schrodinger's equation.
+\end{q}
+\begin{q}
+	Derive the time independent Schrodinger Equation
+\end{q}
+\begin{q}
+	What is the Hamiltonian
+\end{q}
+\begin{q}
+	Arrive at the expression of momentum as an operator
+\end{q}
+\begin{q}
+	Derive the time independent Schrodinger Equation
+\end{q}
+\begin{q}
+	State Schrodinger's equation in Three Dimensions
+\end{q}
+\begin{q}
+	Use the time dependent Schrodinger's equation to express the wave function as a second order differential equation of the form 
+	\[ f'' + x^2f = 0 \]
+\end{q}
+\section{Chapter 6 Solutions}
+	\begin{ans}
+	Probability of finding a particle in ALL of space is obviously one. 
+	\[ \int\limits_{all space} | \psi(x,t) | ^2 d^3\vec{r}= 1 \]
+\end{ans}
+\begin{ans}
+	The wave function $ \wave $ has to follow the linear relation with it's derivative
+	\[ \frac{d \wave}{dt} = [some constant] \wave \]
+	So we can expect it to be the form of some exponential. 
+\end{ans}
+\begin{ans}
+	Based on our expectation of the form of the equation, the wave function is
+	\[ \wave = \exp(kx - \omega t) \]
+	Where $ k = \dfrac{\lambda}{2 \pi} = \dfrac{h}{2 \pi p} = \dfrac{\hbar}{p}$ and $ \omega = 2 \pi f $ which using $ E = hf $ gives $ \omega = \dfrac{2 \pi E}{h} = \dfrac{E}{\hbar} $
+	We then find that expecting a plane wave function gives us 
+	\[ \wave = \exp(i\frac{px-Et}{\hbar}) \]
+	Taking the first derivative with respect to time and the second derivative with respect to $ x $ we find
+	\[ \dif{\wave}{t} =  \frac{-iE}{\hbar} \wave\]
+	\[ \diff{\wave}{x}{2} = \frac{p^2}{h^2} \wave\]
+	Using $ E = p^2/2m $ for a free particle we can relate the two functions and get the Time Dependent Schrodinger equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave \]
+	If we consider some potential $ V(x) = V_0 $, that will be a part of the energy giving us the complete equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{h^2}{2m} \diff{}{x}{2} \wave + V(x)\wave\]
+\end{ans}
+\begin{ans}
+	The Hamiltonian is the the operator that only deals with the position part of the Schrodinger equation, and describes the position of the wave function. 
+	$$ H = -\frac{\hbar^2}{2m} \diff{}{x}{2}  + V(x) $$
+\end{ans}
+\begin{ans}
+	From the calculation in Problem 3 we can show that
+	\[ -i \hbar \dif{}{x} \wave = p \wave \]
+	\[ p = -i\hbar \dif{}{x} \]
+\end{ans}
+\begin{ans}
+	We begin with the Time-Independent Schrodinger equation and use a technique called separation of variables for $ \wave $ to express it as a function of just $ x $. \\
+	We express the wave function as
+	\[ \wave = u(x)T(t) \]
+	Then we use this form in the Schrodinger equation
+	\[ i\hbar \dif{\wave}{t} = -\frac{\hbar^2}{2m} \diff{}{x}{2} \wave \]
+	We then find
+	\[ i\hbar \dif{T(t)}{t} u(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} T(t)\]
+	We can rearrange it as
+	\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} \]
+	Notice that each side of the equation sign is dependent on only $ x $ or $ t $. This means that both sides have to be equal no matter the value of $ x $ or $ t $. Which means that both sides must be a constant, represented by $ E $. So, 
+	\[ i\hbar \dif{T(t)}{t} \frac{1}{T(t)} = -\frac{1}{u(x)}\frac{\hbar^2}{2m} \diff{u(x)}{x}{2} = E\]
+	So the Time-Independent Schrodinger equation is 
+	\[ Eu(x) =  -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+	or
+	\[ Eu(x) = Hu(x) \]
+	We complete this by solving for $ T(t) $ which is 
+	\[ \dif{T(t)}{t} = \frac{-i E}{\hbar} T(t) \]
+	So, $ T(t) $ must be
+	\[ T(t) = \exp(\frac{-iEt}{\hbar}) \]
+	giving us the wave function as
+	\[ \wave = u_E(x) \exp(\frac{-iEt}{\hbar}) \]
+\end{ans}
+\begin{ans}
+	Deriving in Three Dimensions is not that difficult but with basic understanding of gradient we can get that it is 
+	\[ i \hbar \dif{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \nabla^2 \cdot \psi(\vec{r}, t) + V(\vec{r}) \cdot \psi(\vec{r}, t) \]
+\end{ans}
+\begin{ans}
+	The Time-Independent Schrodinger Equation gives 
+	\[ Eu(x) = -\frac{\hbar^2}{2m} \diff{u(x)}{x}{2}\]
+	Which we can express in the form
+	\[ f'' + \omega^2 f = 0 \]
+	So, we find
+	\[ \diff{u(x)}{x}{2} + \frac{p^2}{\hbar^2} u(x) = 0  \]
+	Giving us
+	\[ \omega = \pm \frac{p}{\hbar} \]
+\end{ans}
